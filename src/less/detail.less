@@ -1,0 +1,271 @@
+#detail{
+  .full;
+  overflow: hidden;
+  @backColor:#f7f7f7;
+  .border(b){
+    border-bottom: 1px solid @borderColor;
+  }
+  .border(t){
+    border-top: 1px solid @borderColor;
+  }
+  .btn(@w:18px,@h:18px){
+    width: @w;
+    height: @h;
+    border-radius: 100%;
+    background: @fontColor;
+    color: #fff;
+    text-align: center;
+    line-height: @h;
+    display: inline-block;
+  }
+  header{
+    .header();
+  }
+  .content{
+    width: 100%;
+    padding-top:35px;
+    overflow: auto;
+    position: absolute;
+    height: 110%;
+  }
+  .detop{
+    width:100%;
+    dl{
+      width:100%;
+      overflow:hidden;
+      margin-top:8px;
+      padding-bottom:8px;
+      border-bottom: 1px solid @borderColor;
+      background: #fff;
+      clear: both;
+      dt{
+        float:left;
+        width:25%;
+        margin:10px 8px;
+        img{
+          width:100%;
+          height: 100%;
+          background-size:cover;
+        }
+      }
+      dd{
+        float:left;
+        width:69%;
+        p{
+          font-size:.75rem;
+          color: @minColor;
+          line-height: 1.6;
+          .star{
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            background: url(../img/star.png) no-repeat;
+            background-size: 100% auto;
+          }
+          .sale{
+            display: inline-block;
+            padding-left: 8px;
+          }
+          span{
+            font-size: 0.85rem;
+          }
+          &:last-child{
+            span{
+              padding: 0 5px;
+              border-right:1px solid @color;
+              &:last-child{
+                border:none;
+              }
+            }
+          }
+        }
+        .title{
+          font-size: 1.3rem;
+          height: 25px;
+          color: #000;
+          border:none;
+          text-align: left;
+        }
+      }
+    }
+  }
+  .debottom{
+    width: 100%;
+    height: 80%;
+    .left{
+      width: 19%;
+      float: left;
+      background:#fff;
+      li{
+        text-align: center;
+        padding: 10px 5px;
+        a{
+          line-height: 2.5;
+          font-size: 0.8rem;
+          display: inline-block;
+          color: #000;
+          font-weight:500;
+        }
+      }
+      .bg{
+        a{
+          color: @fontColor;
+          border-bottom: 1px solid @fontColor;
+        }
+      }
+    }
+    .right{
+      width: 80.6%;
+      float: left;
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border-left: 1px solid @borderColor;
+      .pos(r);
+      .tit{
+        background: @backColor;
+        line-height: 28px;
+        font-size: 1rem;
+        padding-left: 1rem;
+        width: 100%;
+      }
+      .fixed{
+        .pos(f);
+        z-index: 666;
+        top:125px
+      }
+      dl{
+        width: 100%;
+        overflow: hidden;
+        background: #fff;
+        padding: 10px 0;
+        .border(t);
+        .pos(r);
+        dt{
+          width: 30%;
+          float: left;
+          img{
+            width: 80%;
+            margin: 0 10%;
+          }
+        }
+        dd{
+          width: 70%;
+          float: left;
+          p{
+            font-size: .75rem;
+            color: @minColor;
+            line-height: 18px;
+            span{
+              padding-right: 5px;
+            }
+          }
+          .good,.foodSale{
+            font-size: 0.7rem;
+          }
+          .foodName{
+            font-size: 1rem;
+            color: #000;
+            line-height: 20px;
+          }
+          .price{
+            font-size: 1.1rem;
+            color: #ffd800;
+            font-weight: 500;
+            line-height: 20px;
+          }
+
+          .choosenum{
+            .pos(a);
+            right: 13px;
+            bottom: 13px;
+            span{
+              width: 18px;
+              text-align: center;
+              line-height: 18px;
+              display: inline-block;
+              padding: 0;
+            }
+            .btn{
+              .btn(18px,18px);
+            }
+          }
+        }
+      }
+    }
+  }
+  .defoot{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #000;
+    .pos(a);
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    p{
+      color: #fff;
+      float: left;
+      font-size: .85rem;
+      &.count{
+        margin-left: 15px;
+        margin-right: 10px;
+        span{
+          .btn(20px,20px);
+          margin-right: 5px;
+        }
+      }
+      &.selected{
+        float: right;
+        margin-right: 20px;
+        span{
+          width: 76px;
+          height: 30px;
+          text-align: center;
+          line-height: 30px;
+          border-radius: 5px;
+          background: @fontColor;
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .slide{
+    width: 100%;
+    background: #000;
+    margin-top:45px;
+    opacity: 0.9;
+    .pos(a);
+    bottom: 50px;
+    left: 0;
+    display: none;
+    li{
+      color: #fff;
+      line-height: 36px;
+      clear: both;
+      .con{
+        float: left;
+        padding-left: 10px;
+        font-size: 1.2rem;
+        .priceck{
+          color: #f7a92d;
+          padding-left: 5px;
+        }
+      }
+      .choosenum{
+        float: right;
+        padding-right: 10px;
+        span{
+          width: 18px;
+          text-align: center;
+          line-height: 18px;
+          display: inline-block;
+          padding: 0;
+        }
+        .btn{
+          .btn(18px,18px);
+        }
+      }
+    }
+  }
+}

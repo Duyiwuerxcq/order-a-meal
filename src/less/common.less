@@ -1,0 +1,277 @@
+@baseColor:#FFD800;
+@fontsColor:#333333;
+@borderColor:#EBEBEB;
+@minColor:#666666;
+@color:#ccc;
+@fontColor:#8476D7;
+.full{
+    width:100%;
+    height:100%;
+}
+.wh{
+    width:100%;
+    height: auto;
+}
+.pos(r){
+    position: relative;
+}
+.pos(a){
+    position: absolute;
+}
+.pos(f){
+    position: fixed;
+}
+a{
+    color:#000;
+    text-decoration: none;
+}
+
+.leftArrow(@wh:10px,@borderColor:#fff){
+    &:before{
+        content: "";
+        display: inline-block;
+        width:@wh;
+        height:@wh;
+        border-left:1px solid @borderColor;
+        border-bottom:1px solid @borderColor;
+        -webkit-transform:rotate(45deg);
+    } 
+}
+
+
+.header(){
+    width:100%;
+    height:40px;
+    background:#000;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    .pos(a);
+    left:0;
+    top:0;
+    z-index: 2;
+    em{
+        .pos(a);
+        left:4px;
+        top:0px;
+        padding-left: 1rem;
+        .leftArrow();
+        font-style: normal;
+    }
+    span{
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+}
+*{
+    box-sizing: border-box;
+}
+button{
+    outline: none;
+}
+
+
+.container{
+    .full;
+    .pos(r);
+    header{
+        .header();
+    }
+    section#combo{
+        padding-top:40px;
+        .full;
+        .pos(r);
+        .nav{
+            width:100%;
+            height:42px;
+            position: relative;
+            z-index: 2;
+            background:#fff;
+            ul{
+                height:42px;
+                padding: .5rem 0;
+                border-bottom: 1px solid #EBEBEB;
+                li{
+                    float: left;
+                    width:50%;
+                    height: 20px;
+                    border-right: 1px solid #EBEBEB;
+                    text-align: center;
+                    padding-left: 20px;
+                    padding-top: 3px;
+                    &:last-child{
+                        border-right: none;
+                    }
+                }
+                li:first-child{
+                    background: url(../img/nav1no.jpg) no-repeat 25% 0;
+                    background-size: 15%;
+                    &.on{
+                        background: url(../img/nav1on.jpg) no-repeat 25% 0;
+                        background-size: 15%;
+                        color: @fontColor;
+                    }
+                }
+                li:last-child{
+                    background: url(../img/nav2no.jpg) no-repeat 25% 0;
+                    background-size: 15%;
+                    &.on{
+                        background: url(../img/nav2on.jpg) no-repeat 25% 0;
+                        background-size: 15%;
+                        color: @fontColor;
+                    }
+                }
+            }
+        }
+        .nav1{
+            width:100%;
+            height:48px;
+            position: relative;
+            z-index: 2;
+            background:#fff;
+            ul{
+                height:48px;
+                padding: 1rem 0;
+                border-bottom: 1px solid @borderColor;
+                li{
+                    float: left;
+                    width:25%;
+                    height: 20px;
+                    border-right: 1px solid @borderColor;
+                    text-align: center;
+                    &:last-child{
+                        border-right: none;
+                    }
+                    a{
+                        padding-bottom: .2rem;
+
+                    }
+                    &.on{
+                        a{
+                            color: @fontColor;
+                            border-bottom: 2px solid @fontColor;
+                        }
+                            
+                    }
+                }
+                
+            }
+        }
+        .dining-room-list{
+            .full;
+            overflow: hidden;
+            padding-top:130px;
+            .pos(a);
+            left:0;
+            top:0;
+            z-index: 1;
+            .dining-room-lists{
+                .full;
+                overflow: auto;
+            }
+            
+            .dining-list{
+                padding-top: 10px;
+                background: #fff;
+                dl{
+                    width: 94%;
+                    height:90px;
+                    margin-left: 3%;
+                    &.active{
+                        height: 180px;
+                        dd.rd{
+                            .types{
+                                display: block;
+                                font-size: 0.85rem;
+                                color:#999;
+                            }
+                        }
+                        dd.bd{
+                            display: block;
+                        }
+                    }
+                    dt,dd:first-child{
+                        float: left;
+                        height: auto;
+                    }
+                    dt{
+                        width:80px;
+                        height:80px;
+                        img{
+                            .full;
+                        }
+                    }
+                    dd.rd{
+                        padding-left: 90px;
+                        font-size: .7rem;
+                        line-height: 2;
+                        .types{
+                            display: none;
+                        }
+                        h6{
+                            font-size: .85rem;
+                            font-weight: normal;
+                            color: #000;
+                            b{
+                                font-weight: normal;
+                            }
+                            span{
+                                float: right;
+                                color: orange;
+                            }
+                        }
+                        .names{
+                            color: @fontColor;
+                            font-size:0.85rem;
+                        }
+                        .cons{
+                            font-size: 0.4rem;
+                            span{
+                                border-right: 1px solid @borderColor;
+                                margin-right: .4rem;
+                                font-size:0.85rem;
+                                padding-right: 6px;
+                                &:last-child{
+                                    border-right: none;
+                                }
+                            }
+                            
+                        }
+                    }
+                    dd.bd{
+                        width:100%;
+                        height: 30px;
+                        margin-top: 1rem;
+                        display: none;
+                        
+                        button{
+                            float: right;
+                            padding:.5rem .6rem;
+                            border-radius: 7px;
+                            color: #fff;
+                            background: @fontColor;
+                            border: none;
+                        }
+                        div{
+                            float: left;
+                            label{
+                                display: inline-block;
+                                width: 18px;
+                            }
+                            span{
+                                display: inline-block;
+                                width:20px;
+                                height:20px;
+                                line-height: 20px;
+                                text-align: center;
+                                background: @fontColor;
+                                color: #fff;
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

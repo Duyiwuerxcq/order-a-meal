@@ -1,0 +1,118 @@
+#ordering{
+  width: 100%;
+  height: 100%;
+  overflow:hidden;
+  header{
+    .header();
+  }
+  .order-list{
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+    background: #fff;
+    .top{
+      height: 40px;
+      ul{
+        width: 100%;
+        height:40px;
+        border-bottom: 1px solid @borderColor;
+        li{
+          float: left;
+          width: 50%;
+          text-align:center;
+          line-height:39px;
+          font-size:0.9rem;
+          span{
+            padding-left:10px;
+          }
+          &:first-child{
+            border-right: 1px solid @borderColor;
+            background: url('../img/re.png') 20px center no-repeat;
+            background-size:13% 38%;
+          }
+        }
+        li.bg{
+          color:@fontColor;
+          background: url('../img/can.png') 20px center no-repeat;
+          background-size:13% 35%;
+        }
+      }
+    }
+    .loading{
+      width: 100%;
+      ul{
+        width: 100%;
+        overflow: hidden;
+        padding-bottom:5px;
+        border-bottom:1px solid @borderColor;
+        li{
+          float: left;
+          text-align:center;
+          line-height: 1.4;
+          font-size:0.75rem;
+          padding:8px 12px;
+          border-right:1px solid @borderColor;
+          &:last-child{
+            border:none;
+          }
+        }
+        span.change{
+          color:@fontColor;
+          border-bottom: 1px solid @fontColor;
+          padding-bottom:5px;
+        }
+      }
+    }
+    .ordering-content{
+      width: 100%;
+      height: 78%;
+      overflow: auto;
+      dl{
+        width: 100%;
+        overflow: hidden;
+        border-bottom:1px solid @borderColor;
+        padding-bottom:5px;
+        margin-top:5px;
+        dt{
+          float: left;
+          width: 25%;
+          margin:8px;
+          margin-top:15px;
+          img{
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+          }
+        }
+        dd{
+          float: left;
+          width: 70%;
+          padding:10px 0;
+          line-height: 1.8;
+          h3{
+            color:@fontsColor;
+            font-weight: normal;
+          }
+          p{
+            font-size:0.6rem;
+            color:@minColor;
+            .fa{
+              color: @baseColor;
+            }
+            span{
+              font-size: 0.85rem;
+            }
+          }
+          .condition span{
+            border-right: 1px solid @color;
+            padding-right:5px;
+            font-size: 0.85rem;
+            &:last-child{
+              border:none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

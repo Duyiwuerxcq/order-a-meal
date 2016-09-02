@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>热卖餐厅</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../lib/font-awesome.css">
+</head>
+
+<body>
+    <div class="container" id="ordering">
+        <header>
+            <em class="back">返回</em>
+            <span>热卖推荐</span>
+        </header>
+        <section class="order-list">
+            <div class="top">
+                <ul>
+                    <li class="taocan"></span><span>热买套餐</span></li>
+                    <li class="bg"></span><span>热卖餐厅</span></li>
+                </ul>
+            </div>
+            <div class="loading">
+                <ul class="loading-ul ">
+                    <li class="zhi"><span>智能</span></li>
+                    <li><span>评分</span></li>
+                    <li class="time"><span>送达时间</span></li>
+                    <li class="startTip"><span class="change">起送价</span></li>
+                    <li class="tip"><span>配送费</span></li>
+                </ul>
+            </div>
+            <div class="ordering-content"></div>
+        </section>
+    </div>
+</body>
+</html>
+<script src="../lib/require.js" data-main="../main"></script>
+<script id="list" type="text/html">
+    {{each success as value i}}
+    <dl start="{{value.startTip}}" time="{{value.time}}" tip="{{value.tip}}" name="{{value.name}}" img="{{value.img}}" sales="{{value.sales}}">
+        <dt><img src="../{{value.img}}"></dt>
+        <dd>
+            <h3>{{value.name}}</h3>
+            <p><span class="fa fa-fw fa-star"></span><span class="fa fa-fw fa-star"></span><span class="fa fa-fw fa-star"></span><span class="fa fa-fw fa-star"></span><span class="fa fa-fw fa-star"></span><span>月售{{value.sales}}份</span></p>
+            <p class="condition">
+                <span>起送费￥{{value.startTip}}</span>
+                <span>配送费￥{{value.tip}}</span>
+                <span>预计{{value.time}}min送达</span>
+                </p>
+            </dd>
+        </dl>
+    {{/each}}
+</script>
