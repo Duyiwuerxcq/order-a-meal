@@ -72,12 +72,12 @@ define(['jquery'],function($){
 			function sortShow(arr){
 				fiftyHtml=''
 				for(var i=0;i<arr.length;i++){
-					fiftyHtml+=html.replace('{img}',arr[i].img)
-						.replace('{name}',arr[i].name)
-						.replace('{sales}',arr[i].sales)
-						.replace('{startTip}',arr[i].startTip)
-						.replace('{tip}',arr[i].tip)
-						.replace('{time}',arr[i].time)
+					fiftyHtml+=html.replace(/{img}/g,arr[i].img)
+						.replace(/{name}/g,arr[i].name)
+						.replace(/{sales}/g,arr[i].sales)
+						.replace(/{startTip}/g,arr[i].startTip)
+						.replace(/{tip}/g,arr[i].tip)
+						.replace(/{time}/g,arr[i].time)
 				}
 
 				$('.dls').html(fiftyHtml);

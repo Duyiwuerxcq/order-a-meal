@@ -18,6 +18,9 @@ define(['jquery','lib/arttemplate'],function($,tpl){
                 listObj['start']=$(v).attr('start');
                 listObj['time']=$(v).attr('time');
                 listObj['tip']=$(v).attr('tip');
+                listObj['sales']=$(v).attr('sales');
+                listObj['img']=$(v).attr('img');
+                listObj['name']=$(v).attr('name');
                 listArr.push(listObj);
             })
             return listArr;
@@ -36,7 +39,10 @@ define(['jquery','lib/arttemplate'],function($,tpl){
                     var time=res[i].time;
                     var start=res[i].start;
                     var tip=res[i].tip;
-                    str+='<dl start='+start+' time='+time+' tip='+tip+'>'+ v.dom.innerHTML+'</dl>'
+                    var sales=res[i].sales;
+                    var img=res[i].img;
+                    var name=res[i].name;
+                    str+='<dl start='+start+' time='+time+' tip='+tip+' sales='+sales+' img='+img+' name='+name+' >'+ v.dom.innerHTML+'</dl>'
                 })
                 $('.ordering-content').html(str)
             }else if($(this).hasClass('time')){
@@ -48,7 +54,10 @@ define(['jquery','lib/arttemplate'],function($,tpl){
                     var time=res[i].time;
                     var start=res[i].start;
                     var tip=res[i].tip;
-                    str+='<dl start='+start+' time='+time+' tip='+tip+'>'+ v.dom.innerHTML+'</dl>'
+                    var sales=res[i].sales;
+                    var img=res[i].img;
+                    var name=res[i].name;
+                    str+='<dl start='+start+' time='+time+' tip='+tip+' sales='+sales+' img='+img+' name='+name+' >'+ v.dom.innerHTML+'</dl>'
                 })
                 $('.ordering-content').html(str)
             }else if($(this).hasClass('tip')){
@@ -60,7 +69,10 @@ define(['jquery','lib/arttemplate'],function($,tpl){
                     var time=res[i].time;
                     var start=res[i].start;
                     var tip=res[i].tip;
-                    str+='<dl start='+start+' time='+time+' tip='+tip+'>'+ v.dom.innerHTML+'</dl>'
+                    var sales=res[i].sales;
+                    var img=res[i].img;
+                    var name=res[i].name;
+                    str+='<dl start='+start+' time='+time+' tip='+tip+' sales='+sales+' img='+img+' name='+name+' >'+ v.dom.innerHTML+'</dl>'
                 })
                 $('.ordering-content').html(str)
             }
